@@ -21,4 +21,24 @@
 
     <string name="rating">Overall Rating</string>
 
+    <string name="reviews">User Reviews</string>
+
+    <string name="trailer">Movie Trailer</string>
+
+    <string name="error_delete">Error Deleting</string>
+
+    <string name="delete_confirm">Delete Movie form Favourites?</string>
+
+    <string name="delete">Delete</string>
+
+    <string name="deleted">Deleted</string>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="saved">Movie Saved to Favourites</string>
+
+    <string name="error_save">Error Saving Movie</string>
+
+    <string name="content_poster">Movie Poster. Click to view Trailer</string>
+
 </resources>

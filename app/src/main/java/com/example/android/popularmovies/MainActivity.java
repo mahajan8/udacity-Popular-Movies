@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.List
             bundle.putString("release",movie.getmReleaseDate());
             bundle.putDouble("rating",movie.getmAverageRating());
             bundle.putString("poster",movie.getmPosterPath());
+            bundle.putLong("id",movie.getmId());
 
             intent.putExtras(bundle);
             startActivity(intent);
@@ -115,10 +116,16 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.List
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id==R.id.settings) {
-            Intent settingsIntent = new Intent(this,SettingsActivity.class);
-            startActivity(settingsIntent);
-            return true;
+
+        switch (id) {
+            case R.id.settings:
+                Intent settingsIntent = new Intent(this,SettingsActivity.class);
+                startActivity(settingsIntent);
+                return true;
+            case R.id.fav_activity:
+                Intent favIntent = new Intent(this,FavouriteActivity.class);
+                startActivity(favIntent);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

@@ -5,4 +5,6 @@
 
     <dimen name="common_margin">16dp</dimen>
 
+    <dimen name="poster_height">300dp</dimen>
+
 </resources>

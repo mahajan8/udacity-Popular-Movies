@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:id="@+id/activity_detail"
         android:layout_width="match_parent"
@@ -14,17 +15,81 @@
         android:orientation="vertical"
         tools:context="com.example.android.popularmovies.DetailActivity">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/poster_image"
-            android:layout_gravity="center_horizontal"/>
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/movie_title"
-            android:id="@+id/title_text_view" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/poster_image"
+                android:contentDescription="@string/content_poster"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/movie_title"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingStart="@dimen/common_margin"
+                android:id="@+id/title_text_view" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/common_margin"
+                    android:paddingStart="@dimen/common_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rating"
+                        style="@style/detail_heading"
+                        android:paddingTop="@dimen/common_margin"
+                        android:paddingBottom="@dimen/common_margin"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rating_text_view"
+                        android:paddingStart="@dimen/common_margin"
+                        android:paddingLeft="@dimen/common_margin"
+                        style="@style/general_detail"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/common_margin"
+                    android:paddingStart="@dimen/common_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/release_date"
+                        style="@style/detail_heading"
+                        android:paddingTop="@dimen/common_margin"
+                        android:paddingBottom="@dimen/common_margin"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/release_date_text_view"
+                        android:paddingStart="@dimen/common_margin"
+                        android:paddingLeft="@dimen/common_margin"
+                        style="@style/general_detail"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,50 +105,20 @@
             android:id="@+id/synopsis_text_view"
             style="@style/general_detail"/>
 
-        <LinearLayout
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            style="@style/detail_heading"
+            android:id="@+id/review_heading"
+            android:text="@string/reviews"
+            android:paddingTop="@dimen/common_margin"
+            android:paddingBottom="@dimen/common_margin"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/rating"
-                style="@style/detail_heading"
-                android:paddingTop="@dimen/common_margin"
-                android:paddingBottom="@dimen/common_margin"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/rating_text_view"
-                android:paddingStart="@dimen/common_margin"
-                android:paddingLeft="@dimen/common_margin"
-                style="@style/general_detail"/>
-
-        </LinearLayout>
-
-        <LinearLayout
+        <android.support.v7.widget.RecyclerView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/release_date"
-                style="@style/detail_heading"
-                android:paddingTop="@dimen/common_margin"
-                android:paddingBottom="@dimen/common_margin"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/release_date_text_view"
-                android:paddingStart="@dimen/common_margin"
-                android:paddingLeft="@dimen/common_margin"
-                style="@style/general_detail"/>
-
-        </LinearLayout>
-
+            android:layout_height="wrap_content"
+            android:id="@+id/review_list"/>
 
     </LinearLayout>
 </ScrollView>

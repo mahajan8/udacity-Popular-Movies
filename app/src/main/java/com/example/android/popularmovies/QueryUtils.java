@@ -53,8 +53,9 @@ final public class QueryUtils {
                 String release = current.getString("release_date");
                 String overview = current.getString("overview");
                 double rating = current.getDouble("vote_average");
+                long id = current.getLong("id");
 
-                movies.add(new Movie(title,overview,release,rating,posterPath));
+                movies.add(new Movie(id,title,overview,release,rating,posterPath));
             }
 
         } catch (JSONException e) {

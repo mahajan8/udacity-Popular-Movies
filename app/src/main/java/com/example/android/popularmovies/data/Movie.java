@@ -17,14 +17,17 @@ public class Movie {
 
     private String mPosterPath;
 
+    private long mId;
+
     private String Image_URL = "https://image.tmdb.org/t/p/w500";
 
-    public Movie (String title, String overview, String release, double rating, String poster) {
+    public Movie (long id,String title, String overview, String release, double rating, String poster) {
         mTitle = title;
         mOverview = overview;
         mReleaseDate = release;
         mAverageRating = rating;
         mPosterPath = poster;
+        mId = id;
     }
 
     public String getmTitle() {
@@ -45,5 +48,9 @@ public class Movie {
 
     public String getmReleaseDate() {
         return mReleaseDate;
+    }
+
+    public long getmId() {
+        return mId;
     }
 }

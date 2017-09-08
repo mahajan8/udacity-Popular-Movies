@@ -6,6 +6,9 @@
         android:title="@string/menu_settings"
         app:showAsAction="never" />
 
-
+    <item android:id="@+id/fav_activity"
+        android:icon="@drawable/btn_star_big_on"
+        android:title="Favourites"
+        app:showAsAction="always"/>
 
 </menu>

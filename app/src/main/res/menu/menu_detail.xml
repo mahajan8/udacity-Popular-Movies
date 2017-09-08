@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/fav"
+        android:title="Favourite"
+        app:showAsAction="always"
+        android:checkable="true"
+        android:icon="@drawable/btn_star_big_off"/>
+
+
+</menu>
